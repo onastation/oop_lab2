@@ -69,7 +69,7 @@ void linked_list::add_word(string key, string data) {
 
 element* linked_list::getWord(int index) {
 	if (index >= SIZE || index < 0) {
-		exit(1);
+		cout << "Error. Wrong index" << endl;
 	}
 	element* temp = front;
 	int temp_index = 0;
@@ -80,10 +80,10 @@ element* linked_list::getWord(int index) {
 		temp_index++;
 		temp = temp->getNext();
 	}
-	exit(1);
+	cout << "Error. Wrong index" << endl;
 }
 
-string linked_list::search_in_dictionary(string key) {
+string linked_list::search_by_the_key(string key) {
 	element* temp = front;
 	while (temp) {
 		if (temp->getKey() == key) {
@@ -91,7 +91,7 @@ string linked_list::search_in_dictionary(string key) {
 		}
 		temp = temp->getNext();
 	}
-	return "Sorry. The requested word wasn't found.";
+	return "Error. Not found.";
 }
 
 int linked_list::getSIZE() {
