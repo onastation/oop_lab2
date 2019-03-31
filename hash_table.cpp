@@ -55,11 +55,7 @@ void hash_table::add_term(string key, string definition) {
 	check_fill();
 }
 
-string hash_table::find_in_table(string key)
+string hash_table::find_in_dictionary(string key)
 {
-	if (list[hash(key)].getSIZE() == 0) {
-		cout << "Sorry. The requested word wasn't found" << endl;
-		exit(1);
-	}
-	return list[hash(key)].search_in_dictionary(key);
+	return list[hash(key)].search_by_the_key(key);
 }
