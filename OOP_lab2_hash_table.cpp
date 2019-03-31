@@ -1,8 +1,5 @@
 #include "pch.h"
-#include<iostream>
-#include<string>
-#include<fstream>
-#include "hash_table.h"
+#include"functions.h"
 using namespace std;
 
 int main()
